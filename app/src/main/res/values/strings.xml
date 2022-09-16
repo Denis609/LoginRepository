@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">test_java</string>
+
+    <string name="login">Login</string>
+    <string name="sign_in">Sign in</string>
+    <string name="password">Password</string>
+
+    <string name="fab">fab</string>
+</resources>
