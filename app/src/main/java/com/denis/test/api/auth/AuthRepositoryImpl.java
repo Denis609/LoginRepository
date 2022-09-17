@@ -31,7 +31,7 @@ public class AuthRepositoryImpl implements AuthRepository {
 
     @Override
     public Single<TokenDto> login(String login, String password) {
-        return authApi.login(login, password)
+        return authApi.login("password", login, password)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(tokenDto -> {
@@ -56,7 +56,7 @@ public class AuthRepositoryImpl implements AuthRepository {
         TokenDto tokenDto = sharedPrefs.authToken();
         if (tokenDto != null) {
             try {
-                Response<TokenDto> response = authApi.refreshSync(tokenDto.getRefreshToken()).execute();
+                Response<TokenDto> response = authApi.refreshSync("refresh_token" ,tokenDto.getRefreshToken()).execute();
                 if (response.isSuccessful()) {
                     if (response.body() != null) {
                         sharedPrefs.save(response.body());

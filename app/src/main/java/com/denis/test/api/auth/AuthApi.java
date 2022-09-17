@@ -10,13 +10,17 @@ import retrofit2.http.POST;
 
 public interface AuthApi {
     @FormUrlEncoded
-    @POST("oauth/token?grant_type=password")
+    @POST("oauth/token")
     Single<TokenDto> login(
+            @Field("grant_type") String grantType,
             @Field("username") String username,
             @Field("password") String password
     );
 
     @FormUrlEncoded
-    @POST("oauth/token?grant_type=refresh_token")
-    Call<TokenDto> refreshSync(@Field("refresh_token") String token);
+    @POST("oauth/token")
+    Call<TokenDto> refreshSync(
+            @Field("grant_type") String grantType,
+            @Field("refresh_token") String token
+    );
 }
