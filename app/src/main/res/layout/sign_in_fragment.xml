@@ -29,6 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/signIn_title">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/tester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -47,6 +48,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/tester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -59,6 +61,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="12dp"
+        android:contentDescription="@string/fab"
         android:src="@drawable/ic_baseline_arrow_forward_24"
         android:text="@string/sign_in"
         app:backgroundTint="@color/blue"
@@ -66,8 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password"
         app:rippleColor="@color/purple_700"
-        app:tint="@color/white"
-        android:contentDescription="@string/fab" />
+        app:tint="@color/white" />
 
     <ProgressBar
         android:id="@+id/progressBar"

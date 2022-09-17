@@ -1,4 +1,4 @@
-package com.denis.test_java.api.auth;
+package com.denis.test_java.api.setting.auth;
 
 import java.util.HashMap;
 import java.util.Map;

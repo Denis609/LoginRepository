@@ -1,10 +1,10 @@
-package com.denis.test_java.api.interceptor;
+package com.denis.test_java.api.setting.interceptor;
 
 import androidx.annotation.NonNull;
 
-import com.denis.test_java.api.auth.AuthProvider;
-import com.denis.test_java.api.auth.OAuthProvider;
-import com.denis.test_java.model.TokenDto;
+import com.denis.test_java.api.setting.auth.AuthProvider;
+import com.denis.test_java.api.setting.auth.OAuthProvider;
+import com.denis.test_java.api.model.TokenDto;
 
 import java.io.IOException;
 import java.util.Map;
@@ -19,7 +19,11 @@ public class AuthInterceptor implements Interceptor {
 
     public AuthInterceptor(AuthProvider authProvider) {
         this.authProvider = authProvider;
-        this.oAuthProvider = (OAuthProvider) authProvider;
+        if (authProvider instanceof OAuthProvider) {
+            this.oAuthProvider = (OAuthProvider) authProvider;
+        } else {
+            this.oAuthProvider = null;
+        }
     }
 
     @NonNull

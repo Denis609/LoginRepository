@@ -1,6 +1,6 @@
-package com.denis.test_java.api.auth;
+package com.denis.test_java.api.setting.auth;
 
-import com.denis.test_java.model.TokenDto;
+import com.denis.test_java.api.model.TokenDto;
 
 import java.util.Collections;
 import java.util.Map;

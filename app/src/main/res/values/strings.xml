@@ -4,6 +4,13 @@
     <string name="login">Login</string>
     <string name="sign_in">Sign in</string>
     <string name="password">Password</string>
+    <string name="logout">Logout</string>
+    <string name="role_id">roleId: %s</string>
+    <string name="username">username: %s</string>
+    <string name="email">email: %s</string>
+    <string name="permissions">Permissions</string>
+
+    <string name="tester">tester</string>
 
     <string name="fab">fab</string>
 </resources>

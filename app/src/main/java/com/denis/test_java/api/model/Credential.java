@@ -1,10 +1,10 @@
-package com.denis.test_java.model;
+package com.denis.test_java.api.model;
 
-public class Credentials {
-    private String login;
-    private String password;
+public class Credential {
+    private final String login;
+    private final String password;
 
-    public Credentials(String login, String password) {
+    public Credential(String login, String password) {
         this.login = login;
         this.password = password;
     }
